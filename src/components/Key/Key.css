@@ -1,0 +1,29 @@
+span {
+  font-size: 24px;
+}
+
+.correct0 {
+  background-color: none;
+}
+.correct1 {
+  background-color: none;
+}
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2e3d48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}

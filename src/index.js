@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./components/App/App";
 import * as serviceWorker from "./serviceWorker";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Provider } from "react-redux";
@@ -11,10 +11,14 @@ const testData = () => {
 };
 
 const checkKey = (state = [], action) => {
+  console.log("checkKey reducer gets", action.payload);
   if (action.type == "CHECK_KEY") {
     switch (action.payload) {
-      case true:
+      case "h":
         console.log("correct in Store");
+        break;
+      case "e":
+        console.log("correct");
         break;
       default:
         console.log("Incorrect from Store");
