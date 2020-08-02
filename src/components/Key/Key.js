@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 class Key extends Component {
   componentDidMount() {
     console.log("props in Key.js on mount", this.props);
-    document.addEventListener("keypress", this.handleKey);
+    //document.addEventListener("keypress", this.handleKey);
   }
   state = {};
 
@@ -18,7 +18,7 @@ class Key extends Component {
   render() {
     return (
       <>
-        <span className={"poop"}>{this.props.value}</span>
+        <span className={"test"}>{this.props.value}</span>
       </>
     );
   }

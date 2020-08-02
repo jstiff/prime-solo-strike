@@ -8,7 +8,7 @@ class Text extends Component {
   keyRef = React.createRef();
 
   componentDidMount() {
-    //document.addEventListener("keypress", this.handleKey);
+    document.addEventListener("keypress", this.handleKey);
     console.log("props on mount in Text.js", this.props);
     // const node = ReactDOM.findDOMNode(this);
     // console.log("DOMNODE inside of KEY.js", this.node);
@@ -37,16 +37,8 @@ class Text extends Component {
   render() {
     return (
       <>
-        <input
-          type="text"
-          ref={(input) => {
-            this.name = input;
-          }}
-        />
-
-        <input onClick={this.Click} type="submit" value="submit" />
         {this.props.letters.map((key, index) => {
-          return <div></div>;
+          return <Key value={key} />;
         })}
       </>
     );
